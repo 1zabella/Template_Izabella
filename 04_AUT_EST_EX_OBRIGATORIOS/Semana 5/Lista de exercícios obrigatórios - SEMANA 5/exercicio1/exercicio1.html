@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exercicio1.css">
+    <link rel="stylesheet" href="exercicio1.js">
+    <title>Operações</title>
+</head>
+
+<body>
+    <h1>Operações</h1>
+    <p>Insira um número: </p> 
+    <input id="numero1" type="number" placeholder="número">
+    <p>Insira outro número: </p> 
+    <input id="numero2" type="number" placeholder="número">
+    <form action="">
+        <p>Por favor, selecione o que deseja fazer:</p>
+        <select id="operacao">
+            <option value="soma">soma</option>
+            <option value="subtracao">subtração</option>
+            <option value="multiplicacao"> multiplicação</option>
+            <option value="divisao">divisão</option>
+            <option value="inteiro">  valor inteiro da divisão</option>
+            <option value="resto">resto da divisão</option>
+        </select>
+    </form>
+    <br>
+
+    <button onclick="operação()">Ver o resultado</button> <br>
+
+    <p id="resultado"></p>
+    <script src="exercicio1.js"></script>
+</body>
+
+</html>
