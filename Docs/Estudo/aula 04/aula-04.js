@@ -10,7 +10,6 @@ function troca_destroca(){
     // var numero1_original = numero1
     // var numero1_trocado = (numero1=numero2)
     // var numero2_trocado = (numero2=numero1_original)
-
     console.log(numero1_trocado , numero2_trocado)
     var resultado = document.getElementById("Resultado").innerHTML = "<p class='texto'> Números trocados: <br> Novo número 1: " + numero1_trocado + "<br>" + "Novo número 2: "+ numero2_trocado + "</p>";
 }

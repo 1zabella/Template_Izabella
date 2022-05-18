@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"xmlns="http://www.w3.orh/1999/xhtml">
+<head>
+    <title>Título</title>
+</head>
+<body>
+    <h1>Um título</h1>
+    <p>Um parágrafo</p>
+    <script type="text/javascript">
+        var contador, filho;
+        for (contador = 0; contador <document.body.children.length; contador = contador +1){
+            filho = document.body.children[contador];
+            console.log(` nó ${contador}: ${filho.nodeType} / ${filho.tagName}`);
+        }
+    </script>
+</body>
+</html>

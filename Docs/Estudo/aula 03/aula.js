@@ -1,4 +1,4 @@
-d
+
 function contaVelocidade(){
     // debugger
     const gravidade = 10;
