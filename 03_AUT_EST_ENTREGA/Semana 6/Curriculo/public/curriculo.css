@@ -1,0 +1,82 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital@0;1&family=Ubuntu:wght@300&display=swap');
+
+body{
+    margin: 20px 100px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(243, 243, 229);
+}
+.titulo{
+    color: black;
+    font-size: 40px;
+    text-align: left;
+    font-family: 'Cabin', sans-serif;
+    width: 50%;
+}
+
+.cabeçalho{
+    color: black;
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Cabin', sans-serif;
+}
+
+.corpo_do_texto{
+    color: black;
+    font-size: 17px;
+    text-align: justify;
+    font-family: 'Cabin', sans-serif;
+}
+
+li , i , ul , p{
+    font-family: 'Cabin', sans-serif;
+    font-size: 17px;
+    color: black;
+}
+
+.subtitulo{
+    color: black;
+    font-size: 20px;
+    text-align: justify;
+    font-family: 'Cabin', sans-serif;
+}
+
+.container-titulo-imagem{
+    display: flex;
+}
+
+.foto-perfil{
+    width: 20%;
+    margin-left: auto;
+    display: block;
+    border-radius: 50%;
+    height: 100%;
+}
+
+button{
+    color: white;
+    background-color: rgb(43, 33, 25);;
+    text-align: center;
+    font-size: larger;
+    font-family: 'Cabin', sans-serif;
+    border-radius: 5%;
+    size: 20px;
+}
+
+.infos{
+    display: block;
+    width: 60%;
+}
+
+footer{
+    color: aliceblue;
+    width: 30px;
+    height: 10px;
+    position: fixed;
+}
+
+div{
+    color: aqua;
+}
