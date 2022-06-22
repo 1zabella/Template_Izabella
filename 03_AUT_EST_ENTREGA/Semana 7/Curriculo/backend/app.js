@@ -34,7 +34,54 @@ app.get('/infos', (req, res) => {
     db.close(); // Fecha o banco
 });
 
-/* Inicia o servidor */
+// Insere um registro (é o C do CRUD - Create)
+app.post('/insertInfos', urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+
+	sql = "INSERT INTO DADOS_DO_CURRICULO (telefone) VALUES ('" + req.body.telefone + "'";
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+	db.run(sql, [],  err => {
+		if (err) {
+		    throw err;
+		}
+	});
+	db.close(); // Fecha o banco
+	res.end();
+});
+
+// Atualiza um registro (é o U do CRUD - Update)
+app.post('/updateInfos', urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	//res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+
+	sql = "UPDATE DADOS_DO_CURRICULO SET telefone = '" + req.body.telefone + "' WHERE id = " + req.body.id;
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+	db.run(sql, [],  err => {
+		if (err) {
+		    throw err;
+		}
+		res.end();
+	});
+	db.close(); // Fecha o banco
+});
+
+// Exclui um registro (é o D do CRUD - Delete)
+app.post('/deleteInfos', urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+
+	sql = "DELETE FROM DADOS_DO_CURRICULO WHERE id = " + req.body.id;
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+	db.run(sql, [],  err => {
+		if (err) {
+		    throw err;
+		}
+		res.end();
+	});
+	db.close(); // Fecha o banco
+});
+
 app.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+  console.log(`Page server running at http://${hostname}:${port}/`);
 });
